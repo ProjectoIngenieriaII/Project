@@ -49,7 +49,7 @@ CREATE TABLE `clientes` (
   PRIMARY KEY (`nro_doc_cliente`)
 );
 
-CREATE TABLE IF NOT EXISTS `turnos` (
+CREATE TABLE IF NOT EXISTS `estados` (
   `id_estado` INT NOT NULL AUTO_INCREMENT,
   `nombres` VARCHAR(15) NOT NULL,
    PRIMARY KEY (`id_estado`)
