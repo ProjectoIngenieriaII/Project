@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `turnos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_turnos_estado1`
-    FOREIGN KEY (`id_estado`)
+    FOREIGN KEY (`estado_turno`)
     REFERENCES `estados` (`id_estado`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
