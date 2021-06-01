@@ -25,6 +25,20 @@ CREATE TABLE IF NOT EXISTS `ciudades` (
     ON UPDATE NO ACTION
 );
 
+CREATE TABLE `sucursales` (
+  `id_sucursal` int(11) NOT NULL,
+  `nom_sucursal` varchar(80) NOT NULL,
+  `dir_sucursal` varchar(100) NOT NULL,
+  `tel_sucursal` decimal(10,0) DEFAULT NULL,
+  `id_ciudad` int(11) NOT NULL,
+  PRIMARY KEY (`id_sucursal`),
+  CONSTRAINT `fk_ciudades1`
+    FOREIGN KEY (`id_ciudad`)
+    REFERENCES `ciudades` (`id_ciudad`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
 CREATE TABLE IF NOT EXISTS `servicios` (
   `id_servicio` INT NOT NULL AUTO_INCREMENT,
   `nom_servicio` INT NOT NULL,
