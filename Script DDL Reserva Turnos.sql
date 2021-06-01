@@ -69,6 +69,12 @@ CREATE TABLE IF NOT EXISTS `estados` (
    PRIMARY KEY (`id_estado`)
 );
 
+CREATE TABLE IF NOT EXISTS `horarios` (
+  `id_horario` INT NOT NULL AUTO_INCREMENT,
+  `horario` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`id_horario`)
+);
+
 CREATE TABLE IF NOT EXISTS `turnos` (
   `id_turno` INT NOT NULL AUTO_INCREMENT,
   `fecha_turno` DATE NOT NULL,
@@ -99,10 +105,4 @@ CREATE TABLE IF NOT EXISTS `turnos` (
     REFERENCES `horarios` (`id_horario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
-);
-
-CREATE TABLE IF NOT EXISTS `horarios` (
-  `id_horario` INT NOT NULL AUTO_INCREMENT,
-  `horario` VARCHAR(50) NOT NULL,
-  PRIMARY KEY (`id_horario`)
 );
