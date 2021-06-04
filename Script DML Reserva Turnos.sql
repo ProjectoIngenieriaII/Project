@@ -34,10 +34,17 @@ values ("Centro Automotriz MoviCentro", "Carrera 43 A #19-87", 4463598, 1),
        ("Centro Automotriz Altamira", "Carrera 51 # 10-87", 9230841, 8);
        
 select * from sucursales;
-	   
 
-
-
+insert into servicios (nom_servicio,valor_servicio, tiempo_servicio ,id_sucursal)
+values ("Lavado",70000,30,1),
+		("Pintura",100000,9,1),
+        ("Taller",400000,180,1),
+        ("Lavado",70000,30,2),
+        ("Pintura",100000,9,2),        
+        ("Pintura",100000,9,2),
+        ("Lavado",70000,30,3),
+        ("Pintura",100000,9,3),
+		("Pintura",100000,9,3);
 
 
 

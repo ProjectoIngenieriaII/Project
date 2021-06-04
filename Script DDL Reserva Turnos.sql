@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `ciudades` (
   `nom_ciudad` VARCHAR(50) NOT NULL,
   `id_depto` INT NOT NULL,
   PRIMARY KEY (`id_ciudad`),
-  INDEX `fk_ciudades_departamentos_idx` (`id_depto` ASC) VISIBLE,
+  INDEX `fk_ciudades_departamentos_idx` (`id_depto` ASC) ,
   CONSTRAINT `fk_ciudades_departamentos`
     FOREIGN KEY (`id_depto`)
     REFERENCES `departamentos` (`id_depto`)
@@ -41,7 +41,7 @@ CREATE TABLE `sucursales` (
 
 CREATE TABLE IF NOT EXISTS `servicios` (
   `id_servicio` INT NOT NULL AUTO_INCREMENT,
-  `nom_servicio` INT NOT NULL,
+  `nom_servicio` VARCHAR(30) NOT NULL,
   `valor_servicio` DECIMAL(7,0) NOT NULL,
   `tiempo_servicio` DECIMAL(5,1) NOT NULL,
   `id_sucursal` INT NOT NULL,
@@ -67,6 +67,12 @@ CREATE TABLE IF NOT EXISTS `estados` (
   `id_estado` INT NOT NULL AUTO_INCREMENT,
   `nombres` VARCHAR(15) NOT NULL,
    PRIMARY KEY (`id_estado`)
+);
+
+CREATE TABLE IF NOT EXISTS `horarios` (
+  `id_horario` INT NOT NULL AUTO_INCREMENT,
+  `horario` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`id_horario`)
 );
 
 CREATE TABLE IF NOT EXISTS `turnos` (
@@ -101,8 +107,4 @@ CREATE TABLE IF NOT EXISTS `turnos` (
     ON UPDATE NO ACTION
 );
 
-CREATE TABLE IF NOT EXISTS `horarios` (
-  `id_horario` INT NOT NULL AUTO_INCREMENT,
-  `horario` VARCHAR(50) NOT NULL,
-  PRIMARY KEY (`id_horario`)
-);
+
