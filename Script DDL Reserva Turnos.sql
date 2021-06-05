@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `ciudades` (
 );
 
 CREATE TABLE `sucursales` (
-  `id_sucursal` int(11) NOT NULL,
+  `id_sucursal` int(11) NOT NULL AUTO_INCREMENT,
   `nom_sucursal` varchar(80) NOT NULL,
   `dir_sucursal` varchar(100) NOT NULL,
   `tel_sucursal` decimal(10,0) DEFAULT NULL,

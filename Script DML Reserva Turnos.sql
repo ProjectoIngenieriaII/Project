@@ -47,7 +47,20 @@ values ("Lavado",70000,30,1),
 		("Pintura",100000,9,3);
 
 
-
+insert into horarios (horario)
+values  ("7:00am a 8:00am"),
+		("8:00am a 9:00am"),
+        ("9:00am a 10:00am"),
+        ("10:00am a 11:00am"),
+        ("11:00am a 12:00pm"),
+        ("12:00pm a 01:00pm"),
+        ("12:00pm a 01:00pm"),
+        ("01:00pm a 02:00pm"),
+        ("02:00pm a 03:00pm"),
+        ("03:00pm a 04:00pm"),
+        ("04:00pm a 05:00pm"),
+        ("05:00pm a 06:00pm");
+        
 
 
 
